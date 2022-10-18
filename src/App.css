@@ -1,10 +1,67 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Karla', sans-serif;
+}
+
+
+
+a, nav li {
+  cursor: pointer;
+}
+
+/*NAV*/
+nav {
+  font-weight: 900;
+  font-size: 150%;
+  width: 50%;
+  margin: auto;
+  display: block;
+  background-color: #00a985;
+  background-image: linear-gradient(175deg, #00a985 0%, #0B8A80 74%);
+  border-radius: 0% 0% 50px 80px;
+  height: 20%;
+  color: white;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*NAV*/
+
+
+
+#section1 {
+  height: 80vh;
+}
+
+#section1 a {
+  background-color: #67b26fc3;
+  text-decoration: none;
+  color: white;
+  animation: all .3s;
+}
+
+#section1 a:hover {
+  background-color: #67B26F;
+}
+
+#section2 {
+  height: 100vh;
+  background-color: #009649;
+}
+
+#section3 {
+  height: 80vh;
+  background-color: #b5ba4d;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +89,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
