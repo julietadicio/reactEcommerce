@@ -1,10 +1,11 @@
 import './App.css';
+import 'primeicons/primeicons.css';
 
 function App() {
   return (
     <>
-
       <nav>
+        Factor Tierra
         <ul>
           <li href="#">
             HOME
@@ -19,10 +20,14 @@ function App() {
             FERTILIZANTES
           </li>
         </ul>
+        <i className="pi pi-shopping-cart"></i>
       </nav>
 
+
+
       <div id="section1">
-        <h1>FACTOR TIERRA</h1>
+        <h1 class="title">FACTOR TIERRA</h1>
+        <h2>Todo lo que necesitas para armar la huerta de tus sueños</h2>
         <a class="btn" href="#section3">Ir seccion3</a>
       </div>
 

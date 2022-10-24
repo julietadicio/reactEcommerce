@@ -6,8 +6,6 @@ html {
   font-family: 'Karla', sans-serif;
 }
 
-
-
 a, nav li {
   cursor: pointer;
 }
@@ -16,31 +14,42 @@ a, nav li {
 nav {
   font-weight: 900;
   font-size: 150%;
-  width: 50%;
-  margin: auto;
-  display: block;
-  background-color: #00a985;
-  background-image: linear-gradient(175deg, #00a985 0%, #0B8A80 74%);
-  border-radius: 0% 0% 50px 80px;
-  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
   color: white;
+  background-color: #00a985;
+  border-radius: 0% 0% 5px 5px;
+  background-image: linear-gradient(175deg, #00a985 0%, #0B8A80 74%);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 nav li {
   list-style: none;
+  margin-right: 4%;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+}
+
+.pi {
+  line-height: 1.5;
 }
 
 /*NAV*/
 
+/*MAIN*/
+
+.title {
+  font-size: 10vw;
+  text-align: center;
+  
+}
 
 
 #section1 {
   height: 80vh;
+  position: relative;
 }
 
 #section1 a {
@@ -64,33 +73,6 @@ nav ul {
   background-color: #b5ba4d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*MAIN*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
