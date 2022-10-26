@@ -6,7 +6,8 @@ html {
   font-family: 'Karla', sans-serif;
 }
 
-a, nav li {
+a,
+nav li {
   cursor: pointer;
 }
 
@@ -17,22 +18,23 @@ nav {
   display: flex;
   justify-content: space-evenly;
   color: white;
-  background-color: #00a985;
-  border-radius: 0% 0% 5px 5px;
-  background-image: linear-gradient(175deg, #00a985 0%, #0B8A80 74%);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  /* border-radius: 0% 0% 5px 5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
 }
 
-nav li {
+nav li,
+p,
+i {
   list-style: none;
-  margin-right: 4%;
+  display: inline-block;
+  padding: 25px 15px;
 }
 
 nav ul {
   display: flex;
 }
 
-.pi {
+i {
   line-height: 1.5;
 }
 
@@ -40,12 +42,43 @@ nav ul {
 
 /*MAIN*/
 
+body {
+  background: radial-gradient(circle, #e4e486, #23a6d5, #32A384, #BFE774);
+  background-size: 900%;
+  animation: animate 18s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .title {
+  margin-top: 8vh;
   font-size: 10vw;
   text-align: center;
+  display: block;
+  margin: auto;
+  width: 70vw;
+  font-weight: bolder;
+  color: #613838;
+  background-color: #61383851;
   
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
 
 #section1 {
   height: 80vh;
@@ -65,14 +98,10 @@ nav ul {
 
 #section2 {
   height: 100vh;
-  background-color: #009649;
 }
 
 #section3 {
   height: 80vh;
-  background-color: #b5ba4d;
 }
 
 /*MAIN*/
-
-

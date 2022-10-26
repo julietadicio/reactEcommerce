@@ -4,8 +4,9 @@ import 'primeicons/primeicons.css';
 function App() {
   return (
     <>
+      
       <nav>
-        Factor Tierra
+        <p>Factor Tierra</p> 
         <ul>
           <li href="#">
             HOME
@@ -27,7 +28,7 @@ function App() {
 
       <div id="section1">
         <h1 class="title">FACTOR TIERRA</h1>
-        <h2>Todo lo que necesitas para armar la huerta de tus sueños</h2>
+        <h1>Todo lo que necesitas para armar la huerta de tus sueños</h1>
         <a class="btn" href="#section3">Ir seccion3</a>
       </div>
 
