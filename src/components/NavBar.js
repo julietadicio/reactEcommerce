@@ -1,4 +1,6 @@
-const Header = () => {
+import CartWidget from "./CartWidget"
+
+const NavBar = () => {
     return(
 <nav>
         <p>Factor Tierra</p> 
@@ -16,9 +18,9 @@ const Header = () => {
             FERTILIZANTES
           </li>
         </ul>
-        <i className="pi pi-shopping-cart"></i>
+        <CartWidget />
       </nav>
     )
 }
 
-export default Header
+export default NavBar

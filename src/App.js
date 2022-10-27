@@ -1,16 +1,16 @@
 import './App.css';
 import 'primeicons/primeicons.css';
-import Header from './components/Header'
-import Section1 from './components/Section1'
+import NavBar from './components/NavBar'
 import Section2 from './components/Section2'
 import Section3 from './components/Section3'
+import ItemListContainer from './components/ItemListContainer';
 
 const App = () => {
   return (
     <>
-      <Header />
+      <NavBar />
 
-      <Section1 />
+      <ItemListContainer greeting='Todo lo que necesitas para armar la huerta de tus sueños' />
 
       <Section2 />
 
@@ -21,4 +21,3 @@ const App = () => {
 }
 
 export default App;
-
