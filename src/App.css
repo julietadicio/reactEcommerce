@@ -50,7 +50,7 @@ i {
 /*MAIN*/
 
 body {
-  background: radial-gradient(circle, #e4e486, #23a6d5, #32A384, #BFE774);
+  background: radial-gradient(circle, #e4e486, #288c4f, #32A384, #BFE774);
   background-size: 900%;
   animation: animate 18s ease infinite;
 }
