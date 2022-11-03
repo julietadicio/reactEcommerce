@@ -4,20 +4,29 @@ import NavBar from './components/NavBar'
 import Section2 from './components/Section2'
 import Section3 from './components/Section3'
 import ItemListContainer from './components/ItemListContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
+      <BrowserRouter>
       <NavBar />
+        <Routes>
 
-      <ItemListContainer greeting='Todo lo que necesitas para armar la huerta de tus sueños' />
+          <Route path='/' element={<ItemListContainer />} />
+      
 
-      <Section2 />
-
-      <Section3 />
-
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
+{/* <NavBar />
+
+<ItemListContainer greeting='Todo lo que necesitas para armar la huerta de tus sueños' />
+
+<Section2 />
+
+<Section3 /> */}
