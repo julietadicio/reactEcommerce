@@ -1,15 +1,14 @@
 import CartWidget from "./CartWidget"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return(
 <nav>
-        <p>Factor Tierra</p> 
+        
+        <Link to='/' style={{textDecoration: "none", color: "white"}}>Factor Tierra</Link>
         <ul>
-          <li href="#">
-            HOME
-          </li>
           <li>
-            TIERRA
+            <Link to='/category/Tierra' style={{textDecoration: "none", color: "white"}}>TIERRA</Link>
           </li>
           <li>
             SEMILLAS
