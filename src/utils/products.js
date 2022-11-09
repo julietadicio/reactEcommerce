@@ -82,7 +82,7 @@ export const products = [
         category: "fertilizante"
     },
     {
-        id: 9,
+        id: 10,
         name: "Fertilizante a base de potasio",
         description: "Con el resultado de unos granos tiernos, con un toque especial de dulzor, delicados y de una textura y coloración brillante, son un tipo de semillas que han sido tratadas para detener su desarrollo.",
         stock: 32,
@@ -91,7 +91,7 @@ export const products = [
         category: "fertilizante"
     },
     {
-        id: 10,
+        id: 11,
         name: "Fertilizante Fosforado",
         description: "Este fertilizante también procede de un mineral extraído: la roca potásica, una amalgama de carbonato de potasio y sales de potasio.",
         stock: 50,

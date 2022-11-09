@@ -91,21 +91,11 @@ h1 {
 
 .linkDetails {
   text-decoration: none;
-  font-weight: bolder;
-  background-color: rgba(255, 255, 255, 0.444);
-  padding: 5px;
-  border-radius: 5px;
+
   color: white;
-  font-size: larger;
-  box-shadow: inset 0 0 0 0 #54b3d6;
-  color: #288c4f;
-  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+  
 }
 
-.linkDetails:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 #32A384;;
-}
 
 .itemInfo{
   display: flex;
@@ -114,11 +104,49 @@ h1 {
 
 }
 
-.elcont {
-  border: 5px black solid;
+.ListContainerItems {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: var(--background);
+  display: block;
+  border: 3px solid var(--primary);
+  padding: 15px;
+  margin: 10vh auto 0 auto;
+  box-shadow: 10px -10px 0 -3px var(--background), 10px -10px var(--green),
+        20px -20px 0 -3px var(--background), 20px -20px var(--yellow), 
+        30px -30px 0 -3px var(--background), 30px -30px var(--orange);
+  transition: box-shadow .5s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 
+.item:hover {
+  top: -12px;
+  box-shadow: 0 0 0 -3px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -3px var(--background), 0 0 0 0  var(--orange)
+}
+
+:root {
+  --primary: #ffffff;
+  --background: rgba(255, 255, 255, 0);
+  --green: #288c4f;
+  --yellow: #32A384;
+  --orange: #BFE774;
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 img {
   max-width: 20vw;
