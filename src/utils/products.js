@@ -33,7 +33,7 @@ export const products = [
         description: 'La tierra de hoja mejora la textura del suelo y permite un mejor paso de aire interno. La tierra de hoja es considerada como el “oro negro”de las plantas debido a que tiene la capacidad de aportar gran cantidad de nutrientes (micronutrientes y macronutrientes).',
         stock: 18,
         cost: 850,
-        image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcornershopapp.com%2Fes-cl%2Fproducts%2F1j1ou-tierra-de-hojas-reforzada-bolsa-de-15-lt&psig=AOvVaw1-9e-LI47OBH3fHakrMKQh&ust=1667596238984000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKD2jJ32kvsCFQAAAAAdAAAAABAF',
+        image: 'https://www.armony.cl/wp-content/uploads/2020/09/FICHA-TIERRA-DE-HOJAS.jpg',
         category: 'tierra',
     },
     {
@@ -78,7 +78,7 @@ export const products = [
         description: "requieren varios pasos para su producción. Las materias primas son el nitrógeno del aire y el hidrógeno del gas natural/metano (CH4).",
         stock: 60,
         cost: 515,
-        image: "https://agroptima-cdn.brutalsys.net/wp-content/uploads/2016/03/tipos-semillas.jpg",
+        image: "https://img.interempresas.net/FotosArtProductos/P138076.jpg",
         category: "fertilizante"
     },
     {
@@ -87,7 +87,7 @@ export const products = [
         description: "Con el resultado de unos granos tiernos, con un toque especial de dulzor, delicados y de una textura y coloración brillante, son un tipo de semillas que han sido tratadas para detener su desarrollo.",
         stock: 32,
         cost: 265,
-        image: "https://agroptima-cdn.brutalsys.net/wp-content/uploads/2016/03/tipos-semillas.jpg",
+        image: "https://agroshow.info/wp-content/uploads/2021/04/Sulfato-de-potasio-y-magnesio-1.png",
         category: "fertilizante"
     },
     {
@@ -96,7 +96,7 @@ export const products = [
         description: "Este fertilizante también procede de un mineral extraído: la roca potásica, una amalgama de carbonato de potasio y sales de potasio.",
         stock: 50,
         cost: 580,
-        image: "https://agroptima-cdn.brutalsys.net/wp-content/uploads/2016/03/tipos-semillas.jpg",
+        image: "https://www.pregonagropecuario.com/assets/images/upload/fosfato_di_amonico.jpg",
         category: "fertilizante"
     },
 ]
