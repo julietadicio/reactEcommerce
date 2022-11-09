@@ -20,11 +20,3 @@ const App = () => {
 };
 
 export default App;
-{
-  
-/*
-
-<Section2 />
-
-<Section3 /> */
-}

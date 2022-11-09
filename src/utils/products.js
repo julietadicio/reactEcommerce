@@ -36,7 +36,42 @@ export const products = [
         image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcornershopapp.com%2Fes-cl%2Fproducts%2F1j1ou-tierra-de-hojas-reforzada-bolsa-de-15-lt&psig=AOvVaw1-9e-LI47OBH3fHakrMKQh&ust=1667596238984000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCKD2jJ32kvsCFQAAAAAdAAAAABAF',
         category: 'Tierra',
     },
-    
+    {
+        id: 5,
+        name: "Semillas Híbridas",
+        description: "Se trata, como su propio nombre indica, del cruce de variedades puras. Entre su característica está un rápido crecimiento y raíces y tallos con más resistencia y más robustos.",
+        stock: 25,
+        cost: 200,
+        image: "https://ondalocalni.com/media/audioproductions/23377267566_79235529fc_o.jpg",
+        category: "Semilla"
+    },
+    {
+        id: 6,
+        name: "Semillas Mejoradas",
+        description: "La característica principal de las semillas mejoradas es que son un tipo de semillas escogidas con la ayuda del hombre, con técnicas y procesos de polinización controlada.",
+        stock: 21,
+        cost: 280,
+        image: "https://sc2.elpais.com.uy/files/article_default_content/uploads/2017/09/10/59b4f26e1ad03.jpeg",
+        category: "Semilla"
+    },
+    {
+        id: 7,
+        name: "Semillas Criollas",
+        description: "Por definición, el término “criollo” quiere decir autóctono. Por tanto, este concepto hace referencia a una tipología de semillas que se adaptan al entorno gracias a un proceso de selección natural o manual.",
+        stock: 29,
+        cost: 250,
+        image: "https://www.iade.org.ar/sites/www.iade.org.ar/files/misiones-ya-tiene-ley-de-proteccion-de-semillas-nativas-y-criollas_full.jpg",
+        category: "Semilla"
+    },
+    {
+        id: 8,
+        name: "Semillas Baby",
+        description: "Con el resultado de unos granos tiernos, con un toque especial de dulzor, delicados y de una textura y coloración brillante, son un tipo de semillas que han sido tratadas para detener su desarrollo.",
+        stock: 32,
+        cost: 265,
+        image: "https://agroptima-cdn.brutalsys.net/wp-content/uploads/2016/03/tipos-semillas.jpg",
+        category: "Semilla"
+    },
 ]
 
 export default products;

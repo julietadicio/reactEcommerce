@@ -11,7 +11,7 @@ const NavBar = () => {
             <Link to='/category/Tierra' style={{textDecoration: "none", color: "white"}}>TIERRA</Link>
           </li>
           <li>
-            SEMILLAS
+          <Link to='/category/Semilla' style={{textDecoration: "none", color: "white"}}>SEMILLAS</Link>
           </li>
           <li>
             FERTILIZANTES
