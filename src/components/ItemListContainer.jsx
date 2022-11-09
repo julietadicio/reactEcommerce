@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams();
-  console.log(idCategory);
 
   useEffect(() => {
     customFetch(
