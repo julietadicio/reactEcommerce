@@ -20,4 +20,4 @@ import products from "../utils/products"
     )
  }
 
-export default ItemDetail
+export default ItemDetailContainer

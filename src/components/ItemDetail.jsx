@@ -5,7 +5,7 @@ const ItemDetail = ({ item }) => {
 
     return (
         <>
-            {item.image}
+            <img src={item.image} alt="" />
             {item.name}
             {item.description}
             {item.stock}
