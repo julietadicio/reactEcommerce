@@ -162,10 +162,9 @@ img {
 }
 
 .itemDetail h1 {
-  font-size: 4vw;
+  font-size: 5vw;
   font-weight: bolder;
 }
-
 
 .countContainer {
   display: flex;
@@ -179,9 +178,10 @@ img {
   border: white 1px solid;
   margin: 4vh 2vh;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 3px;
   transition: all .3s;
   color: white;
+  font-size: large;
 }
 
 .countContainer button:hover {
