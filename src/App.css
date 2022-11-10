@@ -166,5 +166,25 @@ img {
   text-align: center;
 }
 
+.countContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countContainer button {
+  padding: 1vh 2vh;
+  background: none;
+  border: white 1px solid;
+  margin: 4vh 2vh;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all .3s;
+  color: white;
+}
+
+.countContainer button:hover {
+  background-color: rgba(255, 255, 255, 0.182);
+}
 
 /*MAIN*/

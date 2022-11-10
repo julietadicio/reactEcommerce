@@ -3,7 +3,6 @@ const Home = () => {
       <>
         <h1 className="title">FACTOR TIERRA</h1>
         <h1>Todo lo que necesitas para armar la huerta de tus sueños</h1>
-        
       </>
     );
   };
