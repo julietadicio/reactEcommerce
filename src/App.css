@@ -13,6 +13,8 @@ a, li {
   cursor: pointer;
 }
 
+
+
 /*NAV*/
 nav {
   font-weight: 900;
@@ -20,40 +22,34 @@ nav {
   display: flex;
   justify-content: space-evenly;
   color: white;
-  /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);  */
+  align-items: center;
 }
 
 nav li,
-Link,
+nav a,
 i {
   list-style: none;
   display: inline-block;
-  padding: 25px 15px;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav li {
-  animation: all .3s;
+  padding: 15px 10px;
+  transition: all .3s;
   border-radius: 5px;
 }
 
-nav li:hover {
+nav li {
+  padding: 0 15px;
+}
+
+
+nav a:hover {
   background-color: rgba(255, 255, 255, 0.103);
 }
-
-i {
-  line-height: 1.5;
-}
-
 /*NAV*/
 
-/*MAIN*/
 
+
+/*MAIN*/
 body {
-  background: radial-gradient(circle, #e4e486, #288c4f, #32A384, #BFE774);
+  background: radial-gradient(circle, #6c853a, #288c4f, #32A384, #748e45);
   background-size: 900%;
   animation: animate 18s ease infinite;
 }
@@ -73,26 +69,25 @@ body {
 }
 
 .title {
-  margin-top: 8vh;
+  margin-top: 15vh;
   font-size: 10vw;
   text-align: center;
   display: block;
-  margin: auto;
+  margin: 6vh auto;
   width: 70vw;
-  font-weight: bolder;
+  font-weight: 800;
   color: #613838;
   background-color: #6138382e;
 
 }
 
-h1 {
-  color: white;
+.subtitle {
+  color: #613838;
   text-align: center;
 }
 
 .linkDetails {
   text-decoration: none;
-
   color: white;
   
 }
@@ -161,10 +156,16 @@ img {
   max-width: 30vw;
 }
 
-.itemDetail h1, h2, h3 {
+.itemDetail h1, h2 {
   color: white;
   text-align: center;
 }
+
+.itemDetail h1 {
+  font-size: 4vw;
+  font-weight: bolder;
+}
+
 
 .countContainer {
   display: flex;
