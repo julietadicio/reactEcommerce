@@ -75,7 +75,7 @@ export const products = [
     {
         id: 9,
         name: "Fertilizante Nitrogenado",
-        description: "requieren varios pasos para su producción. Las materias primas son el nitrógeno del aire y el hidrógeno del gas natural/metano (CH4).",
+        description: "Requieren varios pasos para su producción. Las materias primas son el nitrógeno del aire y el hidrógeno del gas natural/metano (CH4).",
         stock: 60,
         cost: 515,
         image: "https://img.interempresas.net/FotosArtProductos/P138076.jpg",
