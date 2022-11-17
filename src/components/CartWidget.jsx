@@ -1,6 +1,13 @@
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from "@mui/material/Badge";
+
 const CartWidget = () => {
     return(
-        <i className="pi pi-shopping-cart"></i>
+        
+            
+            <Badge badgeContent={4} color="primary">
+            <ShoppingCartOutlinedIcon />
+          </Badge>
     )
 }
 
