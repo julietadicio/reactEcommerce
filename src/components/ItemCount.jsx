@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
     const [count, setCount] = useState(0)
 
@@ -28,6 +29,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
             {
                 stock && count
+                
                 ? <button onClick={() => onAdd(count)}>Add to Cart</button>
                 : <button disabled>Add to Cart</button>
             }

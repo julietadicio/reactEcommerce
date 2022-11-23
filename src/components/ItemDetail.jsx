@@ -1,13 +1,18 @@
 import { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ItemDetail = ({ item }) => {
 
     const [itemCount, setItemCount] = useState(0)
 
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+        Swal.fire(
+            'Agregado!',
+            'Seleccionaste ' + qty + ' items.',
+            'success'
+          )
         setItemCount(qty);
     }
 
@@ -27,6 +32,7 @@ const ItemDetail = ({ item }) => {
                                 : <Link to='/cart' style={{ textDecoration: "none" }}><button>Check Out</button></Link>
                         }
                     </div>
+                
                 </div>
             </div>
 
