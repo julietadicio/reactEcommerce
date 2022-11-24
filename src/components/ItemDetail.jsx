@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import {CartContext} from "./CartContext"
 
 const ItemDetail = ({ item }) => {
 
     const [itemCount, setItemCount] = useState(0)
+    const {addToCart}  = useContext(CartContext);
 
     const onAdd = (qty) => {
         Swal.fire(
@@ -14,6 +16,7 @@ const ItemDetail = ({ item }) => {
             'success'
           )
         setItemCount(qty);
+        addToCart(item)
     }
 
     return (
