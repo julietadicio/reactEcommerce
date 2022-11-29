@@ -11,38 +11,46 @@ const Cart = () => {
     return (
         <>
             <h1 className="carritoTitle">Carrito</h1>
-            {
-                cartList.length === 0
-                    ? <h2>Tu carrito esta vacío</h2>
-                    : cartList.map(item => <div className="itemCart" key={item.id}>
+            <div className="carrito">
+                <div className="itemsCart">
+                    {
+                        cartList.length === 0
+                            ? <h2>Tu carrito esta vacío</h2>
+                            : cartList.map(item => <div className="itemCart" key={item.id}>
 
-                        <img src={item.image} alt="" />
-                        <h1>{item.name} </h1>
-                        <h2>{item.cost}$</h2>
-                        <h2>{item.qty} item/s</h2>
-                        <h2>$ total</h2>
-                    </div>
-                    )
-            }
-            <div className="orderSummary">
-                {
-                    cartList.length === 1
-                        ? <h1>Tu orden esta vacía</h1>
-                        : cartList.map(item => <div className="itemSummary">
-                            key={item.id}
-                            <h2>{item.name}</h2>
-                            <h3>{item.qty}</h3>
+                                <img src={item.image} alt="" />
+                                <h1>{item.name} </h1>
+                                <h2>{item.cost}$</h2>
+                                <h2>{item.qty} item/s</h2>
+                                {/* <h2>{test.calSubTotal()}$ total</h2> */}
+                                <button onClick={test.deleteItem}>Eliminar</button>
+                            </div>
+                            )
+                    }
+                </div>
+                <div className="orderSummary">
+
+                    <h1>Resumen de compra</h1>
+                    {
+                        cartList.length > 1 &&
+                        cartList.map(item => <div key={item.id}>
+                            <div className="itemSummary">
+                                <h2>{item.name}</h2>
+                                <h2>{item.qty} item/s</h2>
+                                <h2>$</h2>
+                            </div>
                         </div>
                         )
-                }
+                    }
+                    <h1>$ final</h1>
+                </div>
             </div>
             <Link to='/'><button>Seguir mirando</button></Link>
             {
-                test.cartList.length > 0
-                    ? <button onClick={test.clear}>Eliminar todo</button>
-                    : <h2></h2>
-            }
+                test.cartList.length > 0 &&
+                <button onClick={test.clear}>Eliminar todo</button>
 
+            }
         </>
     )
 }

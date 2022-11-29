@@ -55,6 +55,11 @@ const CartContextProvider = (props) => {
         return count
     }
 
+    // const calSubTotal = () => {
+    //     let index = cartList.map(item => item.idItem).indexOf(idItem);
+    //     return cartList[index].costItem * cartList[index].qtyItem;
+    // }
+
     const calcTotal = () => {
         
     }
