@@ -16,7 +16,7 @@ const ItemDetail = ({ item }) => {
             'success'
           )
         setItemCount(qty);
-        addToCart(item)
+        addToCart(item, qty)
     }
 
     return (
