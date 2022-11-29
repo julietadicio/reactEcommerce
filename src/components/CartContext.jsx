@@ -12,7 +12,7 @@ const CartContextProvider = (props) => {
                 ...cartList,
                 {
                     itemId: item.id,
-                    itemImg: item.image[0],
+                    itemImg: item.image,
                     itemName: item.name,
                     itemCost: item.cost,
                     itemQty: qty
@@ -32,8 +32,13 @@ const CartContextProvider = (props) => {
         setCartList(result);
     }
 
+    const calcItems = () => {
+        let qtys = cartList.map(item => item.qtyItem)
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return (
-        <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem }}>
+        <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem, calcItems }}>
             {props.children}
         </CartContext.Provider>
     )
