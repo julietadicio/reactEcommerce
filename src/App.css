@@ -177,7 +177,7 @@ img {
   justify-content: center;
 }
 
-.countContainer button {
+ button {
   padding: 1vh 2vh;
   background: none;
   border: white 1px solid;
@@ -186,11 +186,48 @@ img {
   border-radius: 3px;
   transition: all .3s;
   color: white;
-  font-size: large;
+  font-size: 2vw;
+  
 }
 
-.countContainer button:hover {
+ button:hover {
   background-color: rgba(255, 255, 255, 0.182);
 }
 
 /*MAIN*/
+
+/* CART  */
+.carritoTitle {
+  margin-top: 15vh;
+  font-size: 5vw;
+  text-align: center;
+  display: block;
+  margin: 6vh auto;
+  width: 30vw;
+  font-weight: 800;
+  color: #613838;
+  background-color: #6138382e;
+}
+
+.itemCart {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.471);
+  margin: 2% 1%;
+  padding: 2vw;
+  border-radius: 5px;
+}
+
+.itemCart h1 {
+  color: white;
+  margin-left: 1%;
+  text-decoration: 1px white  solid;
+}
+
+.itemCart h2 {
+  margin: auto;
+}
+
+.itemCart img {
+  width: 10%;
+}
+/* CART  */

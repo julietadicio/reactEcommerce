@@ -37,25 +37,6 @@ const CartContextProvider = (props) => {
         }
     }
 
-
-    // const addToCart = (item, qty) => {
-    //     let found = cartList.find(product => product.itemId === item.id);
-    //     if (found === undefined) {
-    //         setCartList([
-    //             ...cartList,
-    //             {
-    //                 itemId: item.id,
-    //                 itemImg: item.image,
-    //                 itemName: item.name,
-    //                 itemCost: item.cost,
-    //                 itemQty: qty
-    //             }
-    //         ])
-    //     } else {
-    //         found.qtyItem += qty;
-    //     }
-    // }
-
     const clear = () => {
         setCartList([])
     }
@@ -74,7 +55,9 @@ const CartContextProvider = (props) => {
         return count
     }
 
-
+    const calcTotal = () => {
+        
+    }
 
     return (
         <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem, calcItems }}>
