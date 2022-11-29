@@ -29,11 +29,11 @@ const Cart = () => {
                     }
                 </div>
                 <div className="orderSummary">
-
                     <h1>Resumen de compra</h1>
                     {
-                        cartList.length > 1 &&
-                        cartList.map(item => <div key={item.id}>
+                        cartList.length === 0 
+                        ? <h2> Tu compra esta vacía</h2>
+                        : cartList.map(item => <div key={item.id}>
                             <div className="itemSummary">
                                 <h2>{item.name}</h2>
                                 <h2>{item.qty} item/s</h2>
