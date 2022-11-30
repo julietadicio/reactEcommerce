@@ -12,9 +12,12 @@ const ItemListContainer = () => {
 
   useEffect(async () => {
     const querySnapshot = await getDocs(collection(db, "products"));
-    querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
-    });
+    const dataFromFirestore = querySnapshot.docs.map(item => ({
+      id: item.id,
+      ...item.data()
+    }))
+    
+    setDatos(dataFromFirestore)
   }, [idCategory]);
 
   return (
