@@ -3,21 +3,18 @@ import products from "../utils/products";
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from '../utils/firebaseConfig'
 
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams();
 
-  useEffect(() => {
-    customFetch(
-      1000,
-      products.filter((item) => {
-        if (idCategory === undefined) return item;
-        return item.category === idCategory;
-      })
-    )
-      .then((result) => setDatos(result))
-      .catch((err) => console.log(err));
+  useEffect(async () => {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+    });
   }, [idCategory]);
 
   return (
