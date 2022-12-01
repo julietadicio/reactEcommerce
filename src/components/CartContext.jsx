@@ -41,12 +41,13 @@ const CartContextProvider = (props) => {
         setCartList([])
     }
 
-
+    
     const deleteItem = (id) => {
         let result = cartList.filter(item => item.idItem != id);
         setCartList(result);
     }
-
+    
+    //numero para carrito
     const calcItems = () => {
         let count = 0
         cartList.forEach(prod => {
@@ -54,18 +55,21 @@ const CartContextProvider = (props) => {
         })
         return count
     }
+    
+    const calcTotalPerItem = (idItem) => {
+        let index = cartList.map(item => item.idItem).indexOf(idItem);
+        return cartList[index].costItem * cartList[index].qtyItem;
+    }
 
-    // const calSubTotal = () => {
-    //     let index = cartList.map(item => item.idItem).indexOf(idItem);
-    //     return cartList[index].costItem * cartList[index].qtyItem;
-    // }
+
+    
 
     const calcTotal = () => {
         
     }
 
     return (
-        <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem, calcItems }}>
+        <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem, calcItems, calcTotalPerItem }}>
             {props.children}
         </CartContext.Provider>
     )

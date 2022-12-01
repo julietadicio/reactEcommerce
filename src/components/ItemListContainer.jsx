@@ -10,9 +10,6 @@ const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams();
 
-  useEffect(() => {
-    getData()
-  }, [idCategory])
 
   const getData = async () => {
     const document = idCategory
@@ -27,6 +24,9 @@ const ItemListContainer = () => {
     setDatos(dataFromFirestore)
   }
 
+  useEffect(() => {
+    getData()
+  }, [idCategory])
 
   return (
     <>

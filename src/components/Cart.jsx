@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import { Button } from "@mui/material";
+
 
 const Cart = () => {
     const { cartList } = useContext(CartContext);
@@ -20,10 +20,10 @@ const Cart = () => {
 
                                 <img src={item.image} alt="" />
                                 <h1>{item.name} </h1>
-                                <h2>{item.cost}$</h2>
+                                <h2>{item.cost}$ c/u</h2>
                                 <h2>{item.qty} item/s</h2>
-                                {/* <h2>{test.calSubTotal()}$ total</h2> */}
-                                <button onClick={test.deleteItem}>Eliminar</button>
+                                <h2>{test.calcTotalPerItem(item.idItem)}$ total</h2>
+                                <button onClick={() => test.deleteItem(item.idItem)}>Eliminar</button>
                             </div>
                             )
                     }
@@ -37,7 +37,7 @@ const Cart = () => {
                             <div className="itemSummary">
                                 <h2>{item.name}</h2>
                                 <h2>{item.qty} item/s</h2>
-                                <h2>$</h2>
+                                <h2>{test.calcTotalPerItem()}$</h2>
                             </div>
                         </div>
                         )
