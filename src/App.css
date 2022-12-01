@@ -95,6 +95,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 /* .homeNav h1 {
@@ -314,6 +315,8 @@ img {
   color: white;
   margin-left: 1%;
   text-decoration: 1px white  solid;
+  vertical-align: middle;
+  margin: auto;
 }
 
 .itemCart h2 {
@@ -338,6 +341,7 @@ img {
   background-color: rgba(255, 255, 255, 0.471);
   padding: 2%;
   margin: 1% 0;
+  justify-content: space-between;
 }
 
 .orderSummary h1 {

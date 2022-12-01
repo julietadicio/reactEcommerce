@@ -43,11 +43,11 @@ const CartContextProvider = (props) => {
 
     
     const deleteItem = (id) => {
-        let result = cartList.filter(item => item.idItem != id);
+        let result = cartList.filter(item => item.idItem !== id);
         setCartList(result);
     }
     
-    //numero para carrito
+    //numero items para el carrito
     const calcItems = () => {
         let count = 0
         cartList.forEach(prod => {
@@ -55,20 +55,20 @@ const CartContextProvider = (props) => {
         })
         return count
     }
-    
-    const calcTotalPerItem = () => {
-        return cartList.reduce((prev, act) => prev + act.count * act.price, 0);
-     }
-
-
-    
 
     const calcTotal = () => {
-        
+        return cartList.reduce((prev, act) => prev + act.qty * act.cost, 0);
     }
 
     return (
-        <CartContext.Provider value={{ cartList, addToCart, clear, deleteItem, calcItems, calcTotalPerItem }}>
+        <CartContext.Provider value={{ 
+            cartList, 
+            addToCart, 
+            clear, 
+            deleteItem, 
+            calcItems, 
+            calcTotal 
+            }}>
             {props.children}
         </CartContext.Provider>
     )

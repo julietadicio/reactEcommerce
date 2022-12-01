@@ -19,9 +19,8 @@ const Cart = () => {
 
                                 <img src={item.image} alt="" />
                                 <h1>{item.name} </h1>
-                                <h2>{item.cost}$ c/u</h2>
+                                <h2>${item.cost} c/u</h2>
                                 <h2>{item.qty} item/s</h2>
-                                <h2>{test.calcTotalPerItem(item.idItem)}$ total</h2>
                                 <button onClick={() => test.deleteItem(item.idItem)}>Eliminar</button>
                             </div>
                             )
@@ -30,18 +29,19 @@ const Cart = () => {
                 <div className="orderSummary">
                     <h1>Resumen de compra</h1>
                     {
-                        cartList.length === 0 
-                        ? <h2> Tu compra esta vacía</h2>
-                        : cartList.map(item => <div key={item.id}>
-                            <div className="itemSummary">
-                                <h2>{item.name}</h2>
-                                <h2>{item.qty} item/s</h2>
-                                <h2>{test.calcTotalPerItem()}$</h2>
+                        cartList.length === 0
+                            ? <h2> Tu compra esta vacía</h2>
+                            : cartList.map(item => <div key={item.id}>
+                                <div className="itemSummary">
+                                    <h2>{item.name}</h2>
+                                    <h2>{item.qty} item/s</h2>
+                                    <h2>${item.qty * item.cost}</h2>
+                                </div>
                             </div>
-                        </div>
-                        )
+                            )
                     }
-                    <h1>$ final</h1>
+                    <h1>${test.calcTotal()} total</h1>
+                    <button style={{display: 'block', margin: 'auto'}}>Hacer pedido</button>
                 </div>
             </div>
             <Link to='/'><button>Seguir mirando</button></Link>
