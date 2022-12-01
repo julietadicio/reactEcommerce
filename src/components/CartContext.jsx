@@ -56,10 +56,9 @@ const CartContextProvider = (props) => {
         return count
     }
     
-    const calcTotalPerItem = (idItem) => {
-        let index = cartList.map(item => item.idItem).indexOf(idItem);
-        return cartList[index].costItem * cartList[index].qtyItem;
-    }
+    const calcTotalPerItem = () => {
+        return cartList.reduce((prev, act) => prev + act.count * act.price, 0);
+     }
 
 
     
