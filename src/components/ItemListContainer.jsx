@@ -4,21 +4,26 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../utils/firebaseConfig'
+import { query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams();
-  
+
   useEffect(() => {
     getData()
   }, [idCategory])
 
   const getData = async () => {
-    const querySnapshot = await getDocs(collection(db, "products"));
+    const document = idCategory
+      ? query(collection(db, "products"), where('category', '==', idCategory))
+      : collection(db, "products")
+    const querySnapshot = await getDocs(document)
     const dataFromFirestore = querySnapshot.docs.map(item => ({
       id: item.id,
       ...item.data()
     }))
+
     setDatos(dataFromFirestore)
   }
 
