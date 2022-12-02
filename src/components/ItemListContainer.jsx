@@ -8,19 +8,19 @@ const ItemListContainer = () => {
   const [datos, setDatos] = useState([]);
   const { idCategory } = useParams();
 
-//componentDidUpdate
-useEffect(() => {
-  firestoreFetch(idCategory)
+  //componentDidUpdate
+  useEffect(() => {
+    firestoreFetch(idCategory)
       .then(result => setDatos(result))
       .catch(err => console.log(err));
-}, [idCategory]);
+  }, [idCategory]);
 
-//componentWillUnmount
-useEffect(() => {
-  return (() => {
+  //componentWillUnmount
+  useEffect(() => {
+    return (() => {
       setDatos([]);
-  })
-}, []);
+    })
+  }, []);
 
 
   return (

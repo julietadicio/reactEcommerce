@@ -7,7 +7,6 @@ const ItemDetailContainer = () => {
     const [dato, setDato] = useState({});
     const { idItem } = useParams();
 
-
     useEffect(() => {
         firestoreFetchOne(idItem)
             .then(result => setDato(result))

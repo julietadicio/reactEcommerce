@@ -1,11 +1,41 @@
+import { doc, setDoc } from "firebase/firestore";
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-
+import { serverTimestamp } from 'firebase/firestore'
+import { db } from "../utils/firebaseConfig";
 
 const Cart = () => {
     const { cartList } = useContext(CartContext);
     const test = useContext(CartContext)
+
+    const crearOrden = () => {
+        let orden = {
+            buyer: {
+                name: "John",
+                email: "john@example.com",
+                phone: "123-456-789"
+            },
+            date: serverTimestamp(),
+            items: test.cartList.map(item => ({
+                id: item.id,
+                price: item.cost,
+                name: item.name,
+                qty: item.qty
+            })),
+            total: test.calcTotal()
+        }
+
+
+        const crearOrdenFirestore = async () => {
+            await setDoc(doc(db, "ordenes", "1"), orden);
+        }
+    
+        crearOrdenFirestore()
+            .then(console.log('yes'))
+            .catch(err => console.log(err))
+    }
+
 
     return (
         <>
@@ -41,7 +71,7 @@ const Cart = () => {
                             )
                     }
                     <h1>${test.calcTotal()} total</h1>
-                    <button style={{display: 'block', margin: 'auto'}}>Hacer pedido</button>
+                    <button onClick={crearOrden} style={{ display: 'block', margin: 'auto' }}>Hacer pedido</button>
                 </div>
             </div>
             <Link to='/'><button>Seguir mirando</button></Link>
