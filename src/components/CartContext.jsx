@@ -43,9 +43,10 @@ const CartContextProvider = (props) => {
 
     
     const deleteItem = (id) => {
-        let result = cartList.filter(item => item.idItem !== id);
-        setCartList(result);
+        let result = cartList.filter(item => item.id !== id);
+        setCartList([...result]);
     }
+
     
     //numero items para el carrito
     const calcItems = () => {
