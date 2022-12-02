@@ -1,9 +1,11 @@
-import { doc, setDoc } from "firebase/firestore";
+import { collection, updateDoc, doc, increment, setDoc } from "firebase/firestore";
 import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { serverTimestamp } from 'firebase/firestore'
 import { db } from "../utils/firebaseConfig";
+import Swal from "sweetalert2";
+
 
 const Cart = () => {
     const { cartList } = useContext(CartContext);
@@ -28,11 +30,28 @@ const Cart = () => {
 
 
         const crearOrdenFirestore = async () => {
-            await setDoc(doc(db, "ordenes", "1"), orden);
+            const nuevoIdOrdenes = doc(collection(db, 'ordenes'))
+            await setDoc(nuevoIdOrdenes, orden);
+            return nuevoIdOrdenes
         }
-    
+
         crearOrdenFirestore()
-            .then(console.log('yes'))
+            .then(res => {
+                Swal.fire(
+                    res.id,
+                    'Ese es el ID de tu orden!',
+                    'success'
+                )
+                test.cartList.forEach(async (item) => {
+                    const itemRef = doc(db, "products", item.id);
+                    await updateDoc(itemRef, {
+                        stock: increment(-item.qty)
+                    });
+                })
+
+
+                test.clear()
+            })
             .catch(err => console.log(err))
     }
 
